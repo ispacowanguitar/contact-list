@@ -1,0 +1,39 @@
+<div class="container">
+<%= link_to "add a person", "/people/new" %>
+  <% @rows.times do %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="well">
+          <% @count += 1 %>
+          <% person = @people[@count] %>
+          <%= link_to "#{person.first_name}", "/people/#{person.id}", :style=>'color: red; font-size: 100%' %>
+          <h3><%= person.last_name %></h3>
+          <h3><%= person.email %></h3>
+          <%= link_to "Edit this person", "/people/#{person.id}/edit" %>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="well">
+          <% @count += 1 %>
+          <% person = @people[@count] %>
+          <%= link_to "#{person.first_name}", "/people/#{person.id}", :style=>'color: green; font-size: 100%' %>
+          <h3><%= person.last_name %></h3>
+          <h3><%= person.email %></h3>
+          <%= link_to "Edit this person", "/people/#{person.id}/edit" %>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="well">
+        <% @count += 1 %>
+        <% person = @people[@count] %>
+        <%= link_to "#{person.first_name}", "/people/#{person.id}", :style=>'color: yellow; font-size: 100%' %>
+        <h3><%= person.last_name %></h3>
+        <h3><%= person.email %></h3>
+        <%= link_to "Edit this person", "/people/#{person.id}/edit" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

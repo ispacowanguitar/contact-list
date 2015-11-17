@@ -1,0 +1,17 @@
+<%= form_tag "/people/#{@person.id}", method: :patch do %>
+<div>
+  <%= label_tag :first_name %>
+  <%= text_field_tag :first_name, @person.first_name %>
+</div>
+<div>
+  <%= label_tag :last_name %>
+  <%= text_field_tag :last_name, @person.last_name %>
+</div>
+<div>
+  <%= label_tag :email %>
+  <%= text_field_tag :email, @person.email %>
+</div>
+<div>
+  <%= submit_tag 'DO IT!' %>
+</div>
+<% end %>

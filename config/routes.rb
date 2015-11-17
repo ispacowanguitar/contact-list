@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  get '/stuff' => 'pages#person'
+  get '/people' => 'pages#index'
+  get '/people/new' => 'pages#new'
+  post '/people' => 'pages#create'
+
+  get '/people/:id' => 'pages#show'
+  get '/people/:id/edit' => 'pages#edit'
+  patch '/people/:id' => 'pages#update'
+
+  delete '/people/:id' => 'pages#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

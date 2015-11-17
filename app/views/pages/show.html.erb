@@ -1,0 +1,11 @@
+<div class="container">
+  <div class ="row">
+  <div class ="col-md-4">
+  <h1><%= @person.first_name %></h1>
+  <h3><%= @person.last_name %></h3>
+  <h3><%= @person.email %></h3>
+  <%= link_to "Delete this person", "/people/#{@person.id}", method: :delete %>
+  <%= link_to "Back", "/people" %>
+  </div>
+  </div>
+</div>
